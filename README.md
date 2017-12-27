@@ -1,0 +1,2 @@
+# sonad
+Sõnad ja fraasid
