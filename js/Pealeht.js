@@ -2,11 +2,12 @@
 const url = 'https://script.google.com/macros/s/AKfycbwUpV3mdNFMcMB69Ja9rK-D9WljGhuhfm4xvIqOyXbAveYSllg/exec';
 
 function alusta() {
-  // Käsitleja eksamitöö esitamise nupule
+  laeSonad();
+  /* Käsitleja eksamitöö esitamise nupule
   $('#esitaNupp').on('click', e => {
     e.preventDefault(); 
     esitaEksamitoo();
-  });
+  }); */
 }
 
 function laeSonad() {

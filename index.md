@@ -1,5 +1,6 @@
 ---
 permalink: 
+layout: Pealeht
 ---
 
 <p id='teenuseSeisund' class='teade'></p>
@@ -8,4 +9,3 @@ permalink:
 
 <div id='sonaKirjed'></div>
 
-(sisu)
