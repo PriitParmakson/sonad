@@ -1,0 +1,10 @@
+title: Sõnad ja fraasid
+baseurl: "https://agiil.github.io/sonad"
+
+defaults:
+  -
+    scope:
+      path: "" # Kõik failid
+    values:
+      layout: "Times"
+  
