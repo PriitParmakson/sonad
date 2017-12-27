@@ -20,7 +20,6 @@ function laeSonad() {
     return response.json();
   })
   .then(saadudJSON => {
-    kuvaTeade('Teenus on avatud.', 'OK');
     esitaSonad(saadudJSON.Kirjed);
   })
   .catch(error => {

@@ -43,3 +43,7 @@
   color: #757575;
 }
 .disabled { color: Gainsboro !important; cursor: auto; }
+
+#sonaKirjed p {
+  margin-bottom: 0.2rem;
+}
