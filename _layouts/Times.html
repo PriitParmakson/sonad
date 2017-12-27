@@ -49,25 +49,24 @@
 {% endif %}
 
   <!-- Ülarida -->
-  <div class='d-flex mb-3 justify-content-between pais'>
+  <div>
     <p class='kursusePais'>
       <a href='{{ site.baseurl }}'>Sõnad ja fraasid</a> · <a href='{{ site.baseurl }}/Spekk'>Spekk</a>
     </p>
     
     {% if page.pealeht == true %}
-    <div class='align-self-start ml-auto'> 
-      <div class="g-signin2" data-onsuccess="onSignIn" data-toggle='tooltip' title='Eksami tegemiseks logi sisse' data-placement="bottom"></div>
-      <div id='Kasutaja'></div>
+    <div> 
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
       <div id='KasutajaEmail'></div>
     </div>
     {% endif %}
   </div>
 
   <!-- Uue sõna dialoog -->
-  <div id='UueSonaDialoog' class='d-flex align-items-center justify-content-between'>
+  <div id='UueSonaDialoog'>
     <!-- Uus sõna -->
     <div id='UusSonaDiv'>
-      <input id='UusSona' type='text' class='form-control' autocomplete='off'>
+      <input id='UusSona' type='text' autocomplete='off'>
     </div>
     <!-- Uue sõna salvestamise nupp -->
     <div id='SalvestaUusSonaNupp' class='nupp'>

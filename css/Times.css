@@ -15,14 +15,6 @@ body {
 
 #Tekst { width: 40rem; }
 
-/* Avalehe paigutus */  
-#Container { display: flex; max-width: 60em; }
-#Avatekst {
-  flex-grow: 1; margin-left: 2rem;
-  max-width: 63rem; /* Teksti loetavuse huvides */
-}  
-/*#endregion */
-
 /*#region Pealkirjad */
 h1 {
   font-size: 16pt !important;
