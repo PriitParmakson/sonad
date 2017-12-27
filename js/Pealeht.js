@@ -16,18 +16,11 @@ function laeSonad() {
     return response.json();
   })
   .then(saadudJSON => {
-    $('#Teatepaan')
-      .addClass('OKteade');
-    $('#Teatetekst')
-      .text('Teenus on avatud.');
-    console.log('Teenus on avatud.');
+    kuvaTeade('Teenus on avatud.', 'OK');
     esitaSonad(saadudJSON.Kirjed);
   })
   .catch(error => {
-    $('#Teatepaan')
-      .addClass('NOKteade');
-    $('#Teatetekst')
-      .text('Teenus ei ole avatud.');
+    kuvaTeade('Teenus ei ole avatud.', 'NOK');
     console.log('Teenus ei ole avatud.');
   });
 }

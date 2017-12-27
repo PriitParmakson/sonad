@@ -3,9 +3,17 @@ permalink:
 layout: Pealeht
 ---
 
-<div id='teateAla'>
-  <p id='teenuseSeisund' class='teade my-3 peidetud'></p>
+<!-- Teatepaan -->
+<div id='Teatepaan' class='paan peidetud d-flex align-items-start justify-content-between'>
+  <!-- Teade -->
+  <p id='Teatetekst'>
+  </p>
+  <!-- Sulgemisnupp -->
+  <div id='TeatepaanSulge' class='sulgemisnupuke'>
+    <span>&times;</span>
+  </div>
 </div>
+
 
 # Sõnad ja fraasid
 
