@@ -30,3 +30,5 @@ function seaTeatepaaniKasitlejad() {
     $('#Teatepaan').addClass('peidetud');
   });
 }
+
+seaTeatepaaniKasitlejad();
