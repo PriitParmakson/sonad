@@ -28,18 +28,28 @@
   {% endcomment %}
 </head>
 
-{% comment %}
 {% if page.pealeht = true %}
   <body onload='alusta()'>
 {% else %}
   <body>  
 {% endif %}
-{% endcomment %}
 
   <body>
 
-  {% include Pais.html %}
-  
+  <!-- Ülarida -->
+  <div class='d-flex mb-3 justify-content-between pais'>
+    <p class='kursusePais'>
+      <a href='{{ site.baseurl }}'>Sõnad ja fraasid</a> · 
+      <a href='{{ site.baseurl }}/Spekk'>Spekk</a>
+    </p>
+    
+    <div class='align-self-start ml-auto'> 
+      <div class="g-signin2" data-onsuccess="onSignIn" data-toggle='tooltip' title='Eksami tegemiseks logi sisse' data-placement="bottom"></div>
+      <div id='Kasutaja'></div>
+      <div id='KasutajaEmail'></div>
+    </div>
+  </div>
+      
   <div id='Tekst'>      
     {{ content }}
   </div>
