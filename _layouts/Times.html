@@ -51,8 +51,7 @@
   <!-- Ülarida -->
   <div class='d-flex mb-3 justify-content-between pais'>
     <p class='kursusePais'>
-      <a href='{{ site.baseurl }}'>Sõnad ja fraasid</a> · 
-      <a href='{{ site.baseurl }}/Spekk'>Spekk</a>
+      <a href='{{ site.baseurl }}'>Sõnad ja fraasid</a> · <a href='{{ site.baseurl }}/Spekk'>Spekk</a>
     </p>
     
     {% if page.pealeht == true %}
@@ -63,7 +62,35 @@
     </div>
     {% endif %}
   </div>
-      
+
+  <!-- Uue sõna lisamise dialoog -->
+  <div id='UueSonaDialoog' class='paan dialoog peidetud'>
+    
+    <div id='USDRida1' class='d-flex align-items-center justify-content-between'>
+      <!-- Uus sõna -->
+      <div id='USDBlokk1'>
+        <label class='active'>
+        Uus sõna: <input id='UusSona' type='text' class='form-control' autocomplete='off'>
+        </label>
+      </div>
+      <!-- Uue sõna salvestamise nupp -->
+      <div id='SalvestaUusSonaNupp' class='nupp' data-toggle='tooltip' title='Salvesta' data-animation='false'>
+        <i class='ikoon material-icons' style='color: #C5E1A5;'>help_outline</i>
+      </div>
+      <!-- Sulgemisnupp -->
+      <div id='UueSonaDialoogSulge' class='align-self-start ml-auto sulgemisnupuke'>
+        <span>&times;</span>
+      </div>
+    </div>
+
+    <div id='USDRida2' class='d-flex'>
+      <div id='UuSonaSalvestamiseTeade'>
+        &nbsp;
+      </div>
+    </div>
+
+  </div>
+  
   <div id='Tekst'>      
     {{ content }}
   </div>

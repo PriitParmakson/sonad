@@ -17,6 +17,10 @@
   font-weight: bold;
   color: Gray;
 }
+.dialoog {
+  /* Avatav/suletav dialoogivorm */
+  border: 1px solid #C5E1A5;
+}
 
 /* Teatepaan */
 #Teatepaan { 
@@ -33,3 +37,9 @@
   background-color: lavenderblush;
 }
 
+/* Nupud */
+.nupp { margin: 1rem 0.5rem;
+  cursor: pointer;
+  color: #757575;
+}
+.disabled { color: Gainsboro !important; cursor: auto; }
