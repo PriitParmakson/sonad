@@ -6,13 +6,16 @@
   <title>Sõnad ja fraasid</title>
   <meta name="viewport" content="width=device-width" initial-scale="1">
 
+  {% comment %}
   {% if page.pealeht = true %}
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="838912361532-9utpihfcsrqn8e8o9gsg3ag1i0g8i7df.apps.googleusercontent.com">
   {% endif %}
+  {% endcomment %}
 
   {% include Standardlaadimised.html %}
 
+  {% comment %}
   {% if page.pealeht = true %}
     <!-- Google Identity Platform -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -22,6 +25,7 @@
     <script src='js/GoogleAutentimine.js'></script>
     <link rel='stylesheet' href='css/PealeheEri.css'>
   {% endif %}
+  {% endcomment %}
 </head>
 
 {% if page.pealeht = true %}
