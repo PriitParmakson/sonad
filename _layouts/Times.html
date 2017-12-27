@@ -43,7 +43,7 @@
 
   <!-- Ülarida -->
   <div>
-    <p class='kursusePais'>
+    <p class='pais'>
       <a href='{{ site.baseurl }}'>Sõnad ja fraasid</a> · <a href='{{ site.baseurl }}/Spekk'>Spekk</a>
     </p>
     
@@ -55,6 +55,7 @@
     {% endif %}
   </div>
 
+  {% if page.pealeht == true %}
   <!-- Uue sõna dialoog -->
   <div id='UueSonaDialoog'>
     <!-- Uus sõna -->
@@ -66,6 +67,7 @@
       <i class='ikoon material-icons'>cloud_upload</i>
     </div>
   </div>
+  {% endif %}
 
   <div id='Tekst'>      
     {{ content }}
