@@ -1,6 +1,5 @@
 ---
 permalink: Spekk
-layout: Spekk
 ---
 
 # Spekk
