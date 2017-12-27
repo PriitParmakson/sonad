@@ -122,9 +122,9 @@ a[href]:hover {
 /*#endregion */
 
 /*#region Paneelid */
-.note, .teade { border-radius: 8px; padding: 1rem; }
+.nb, .teade { border-radius: 4px; padding: 0.5rem; }
 /* Märkus */
-.note { 
+.nb { 
   border: 1px solid coral;
   background-color: lavenderblush;
   color: coral;
