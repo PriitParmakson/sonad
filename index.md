@@ -3,7 +3,9 @@ permalink:
 layout: Pealeht
 ---
 
-<p id='teenuseSeisund' class='teade'></p>
+<div id='teateAla'>
+  <p id='teenuseSeisund' class='teade my-3 peidetud'></p>
+</div>
 
 # Sõnad ja fraasid
 

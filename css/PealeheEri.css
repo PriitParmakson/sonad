@@ -1,0 +1,35 @@
+.paan {
+  border-radius: 4px; 
+  padding: 0 0 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem; 
+}
+.peidetud { 
+  /* display: flex; ülekirjutamiseks */
+  display: none !important;
+}
+.sulgemisnupuke {
+  /* Sulgemisnupuke */
+  padding: 0 0.5rem 0.5rem 0.5rem;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 16pt;
+  font-weight: bold;
+  color: Gray;
+}
+
+/* Teatepaan */
+#Teatepaan { 
+  border: 1px solid #C5E1A5;
+}
+.OKteade {
+  color: darkslategray;
+  border: 1px solid Aqua;
+  background-color: azure;
+}
+.NOKteade {
+  color: coral;
+  border: 1px solid coral;
+  background-color: lavenderblush;
+}
+

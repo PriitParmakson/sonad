@@ -16,15 +16,17 @@ function laeSonad() {
     return response.json();
   })
   .then(saadudJSON => {
-    $('#teenuseSeisund')
-      .addClass('infoteade')
+    $('#Teatepaan')
+      .addClass('OKteade');
+    $('#Teatetekst')
       .text('Teenus on avatud.');
     console.log('Teenus on avatud.');
     esitaSonad(saadudJSON.Kirjed);
   })
   .catch(error => {
-    $('#teenuseSeisund')
-      .addClass('veateade')
+    $('#Teatepaan')
+      .addClass('NOKteade');
+    $('#Teatetekst')
       .text('Teenus ei ole avatud.');
     console.log('Teenus ei ole avatud.');
   });
@@ -33,6 +35,6 @@ function laeSonad() {
 function esitaSonad(kirjed) {
   kirjed.forEach(kirje => {
     var p = $('<p></p>').text(kirje.Kirje);
-    $('sonaKirjed').append(p);
+    $('#sonaKirjed').append(p);
   });
 }
