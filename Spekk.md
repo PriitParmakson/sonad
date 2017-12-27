@@ -51,7 +51,7 @@ lülita sisse `Google Sheets API`. Mõned API-d, nt `Mail` (e-kirja saatmine) on
 - vaikimisi on loodud kredentsiaal nimega `Apps Script`. Seda kasutab töölehe projekt ise pilveplatvormi projektiga suhtlemiseks. Ära seda puutu.
 - loo uus kredentsiaal oma sirvikurakendusele: `Create credentials`, `OAuth Client ID`, `Web application`. Sirvikrakendusele vali sobiv nimi: `Sonarakendus`.
 - Näita allikdomeen (_Authorized Javascript origins_), kust pöördumisi lubatakse:  `https://agiil.github.io`. Pöördumiste piiramine on vajalik, sest igalt poolt pöördumise lubamine nõuaks rakenduse läbivaatamist Google poolt.
-- kopeeri moodustatud `client ID` - ` 838912361532-9utpihfcsrqn8e8o9gsg3ag1i0g8i7df.apps.googleusercontent.com `
+- kopeeri moodustatud `client ID` - `838912361532-9utpihfcsrqn8e8o9gsg3ag1i0g8i7df.apps.googleusercontent.com`
 - moodustati ka `client secret`. Seda pole praegu vaja.
 
 `doGet()`
