@@ -42,11 +42,12 @@
 {% endif %}
 
   <!-- Ülarida -->
-  <div style='display: flex; justify-content: space-between;'>
-    <p class='pais'>
-      <a href='{{ site.baseurl }}'>Sõnad ja fraasid</a> · <a href='{{ site.baseurl }}/Spekk'>Spekk</a>
-    </p>
-    
+  <div style='display: flex; justify-content: space-between; margin-top: 2rem;'>
+    <div>
+      <p class='pais'>
+        <a href='{{ site.baseurl }}'>Sõnad ja fraasid</a> · <a href='{{ site.baseurl }}/Spekk'>Spekk</a>
+      </p>
+    </div>
     {% if page.pealeht == true %}
     <div> 
       <div class="g-signin2" data-onsuccess="onSignIn"></div>
@@ -60,7 +61,7 @@
   <div id='UueSonaDialoog' style='display: flex; justify-content: space-between;'>
     <!-- Uus sõna -->
     <div id='UusSonaDiv'>
-      <input id='UusSona' type='text' autocomplete='off'>
+      <input id='UusSona' type='text' autocomplete='off' style='width: 30rem;'>
     </div>
     <!-- Uue sõna salvestamise nupp -->
     <div id='SalvestaUusSonaNupp' class='nupp'>
