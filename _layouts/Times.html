@@ -16,7 +16,7 @@
   {% include Standardlaadimised.html %}
 
   {% comment %}
-  {% if page.pealeht = true %}
+  {% if page.pealeht == true %}
     <!-- Google Identity Platform -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     
@@ -28,7 +28,7 @@
   {% endcomment %}
 </head>
 
-{% if page.pealeht = true %}
+{% if page.pealeht == true %}
   <body onload='alusta()'>
 {% else %}
   <body>  
