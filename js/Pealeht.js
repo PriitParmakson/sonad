@@ -43,7 +43,8 @@ function salvestaSona() {
 
   // Koosta saadetav objekt
   var s = {
-    sona: sona
+    sona: sona,
+    IDToken: id_token
   }; 
 
   // Salvesta vastused POST-päringuga Google töölehele
