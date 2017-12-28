@@ -3,13 +3,13 @@
 */
 #UusSona { 
   width: 30rem;
-  height: 2.5rem;
+  height: 1.4rem;
   padding: 0.5rem 0.75rem;
   line-height: 1.25;
   color: #464a4c;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 #UusSona:focus {
   border-color: LightGray;
