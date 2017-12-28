@@ -3,26 +3,38 @@ permalink: Spekk
 ---
 
 # Spetsifikatsioon
+{: .no_toc}
 
-Terminoloogia
+- TOC
+{:toc}
+
+## Terminoloogia
 - `sõna` on huvitav, oluline sõna või fraas
 - `sõnakirje` on eraldi rea või lõiguna esitatud `sõna` koos vastetega, selgitustega, määratlusega, kasutusnäidetega jms
 - `sõnakirje siseesitus` on sõnakirje salvestamiseks sobilik kuju
 - `kategooria` on sõna liik; sõna võib kuuluda mitmesse kategooriasse
-  - kategooriate nimekirja hoitakse `_data` kaustas
+  - kategooriate nimekirja hoitakse `_data` kaustas TEOSTAMATA
 
-Rakenduse funktsionaalsus
+## Funktsionaalsus
 - kuvab sõnaloetelu
-- loetelu saab filtreerida kategooria kaupa
+- loetelu saab filtreerida kategooria kaupa TEOSTAMATA
 - autenditud kasutaja saab lisada uue sõnakirje
-- autenditud kasutaja saab muuta sõnakirjet
+- autenditud kasutaja saab muuta sõnakirjet TEOSTAMATA
 
-Sõnade salvestamine
-- salvestatakse Google Drive arvutustabelisse
+## Komponendid
+- sirvikurakendus (frontend-rakendus)
+  - asub Githubis: [https://github.com/agiil/sonad](https://github.com/agiil/sonad)
+  - publitseeritakse GitHub Jekylli abil: [https://agiil.github.io/sonad/](https://agiil.github.io/sonad/)
+- backend-rakendus
+  - Google Drive Sheet
+  - Google Apps Script rakendus
+
+##Sõnade salvestamine
+- salvestatakse Google Drive arvutustabelisse, backend-rakenduse API kaudu 
   - kasutaja `priit.parmakson@gmail.com` alla
   - arvutustabeli nimi on `SONAD` ja URL `https://docs.google.com/spreadsheets/d/1-1BP-pSobA1oXvrpAzmdgpxB0p-buvzGBwjRS-PILbk/edit#gid=0`
 
-___Google Apps Script projekt___ `SONAD`
+##___Google Apps Script projekt___ `SONAD`
 - on vajalik arvutustabelile ligipääsuks üle veebi
 - on sisuliselt Google Apps Script failide kogum; kogumis võib olla ka HTML-faile
 - moodustatakse `Tools`, `Script Editor`
@@ -38,8 +50,8 @@ ___Google Apps Script projekt___ `SONAD`
 NB! Kui oled sirvikus sisse logitud mitme Google kontoga, siis lisab Google ülalolevasse veebirakenduse URL-i järjenumbri, kujul `u/0/`. See tuleb eemaldada, siis URL töötab!
 {:.nb}
  
-Pilveprojekt (_Google Cloud Project_) `SONAD`    
-- arvutustabeli projekiga `SONAD` on seotud taustal moodustatud Google pilveplatvormi projekt `SONAD`
+##Pilveprojekt (_Google Cloud Project_) `SONAD`    
+- arvutustabeli projektiga `SONAD` on seotud taustal moodustatud Google pilveplatvormi projekt `SONAD`
 - pilveplatvormi projekt on nagu vahelüli
 - pilveplatvormi projektile pääseb ligi Google Apps skriptiredaktorist: `Resources`, `Cloud Platform Project`
 - töölehe projekti ei tohi ümber siduda teisele pilveplatvormi projektile. Ümbersidumisega lähevad õigused kaotsi.
@@ -53,13 +65,17 @@ lülita sisse `Google Sheets API`. Mõned API-d, nt `Mail` (e-kirja saatmine) on
 - kopeeri moodustatud `client ID` - `838912361532-9utpihfcsrqn8e8o9gsg3ag1i0g8i7df.apps.googleusercontent.com`
 - moodustati ka `client secret`. Seda pole praegu vaja.
 
-`doGet()`
-- on Google Apps Script funktsioon, mis töötleb `HTTP GET` päringu arvutuslehe poole
-- tagastab kõik arvutuslehel salvestatud sõnakirjed
-- kujul `{"Kirjed":[{"Kirje":"..."},{"Kirje":"..."}]}`
+##Backend-rakenduse API
+ - `doGet()` on Google Apps Script funktsioon, mis töötleb `HTTP GET` päringu
+  - tagastab kõik arvutuslehel salvestatud sõnakirjed
+  - kujul `{"Kirjed":[{"Kirje":"..."},{"Kirje":"..."}]}`
+- `doPost()` töötleb `HTTP POST` päringu.
 
-Autentimine
+##Autentimine
 - Google Sign-In abil
+- uue sõna salvestamisel tehakse POST-päring backend-rakenduse API vastu
+- päringuga pannakse kaasa Google antud identsustõend. Tõendi formaat järgib OpenID Connect standardit.
+- Backend-rakendus valideerib identsustõendi, kasutades Google vastavat teenust (s.t kontrollib, et tõendi on välja andnud Google). Seejärel kontrollib, et tõend on välja antud registreeritud klientrakendusele ja tõendi subjekt on Priit Parmakson.
 - Identsustõendi näide:
 
 ````
