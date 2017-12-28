@@ -60,3 +60,26 @@ lülita sisse `Google Sheets API`. Mõned API-d, nt `Mail` (e-kirja saatmine) on
 
 Autentimine
 - Google Sign-In abil
+- Identsustõendi näide:
+
+````
+{
+ "azp": "838912361532-9utpihfcsrqn8e8o9gsg3ag1i0g8i7df.apps.googleusercontent.com",
+ "aud": "838912361532-9utpihfcsrqn8e8o9gsg3ag1i0g8i7df.apps.googleusercontent.com",
+ "sub": "105983716899427159097",
+ "email": "priit.parmakson@gmail.com",
+ "email_verified": "true",
+ "at_hash": "mThpUP54kBpSg4ylicEWmA",
+ "iss": "accounts.google.com",
+ "jti": "2ccd8153c626ec3e3a07142c59eca13f9319decc",
+ "iat": "1514424869",
+ "exp": "1514428469",
+ "name": "Priit Parmakson",
+ "picture": "https://lh6.googleusercontent.com/-NbBrelgmGkA/AAAAAAAAAAI/AAAAAAAAAAA/AFiYof2NA7ULqGay36cWEJe-RzdZuxbG8g/s96-c/photo.jpg",
+ "given_name": "Priit",
+ "family_name": "Parmakson",
+ "locale": "en-FI",
+ "alg": "RS256",
+ "kid": "09e58393e68b2a2a6c866bc9862ee53d2170863a"
+}
+````

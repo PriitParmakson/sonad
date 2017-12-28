@@ -61,7 +61,10 @@ function salvestaSona() {
     // Töötle töölehe vastus
     if (data.result == 'success') {
       kuvaTeade('Salvestatud.', 'OK');
-    } else { 
+      // Lisa uus sõna loendisse
+      var p = $('<p></p>').text(sona);
+      $('#sonaKirjed').prepend(p);
+      } else { 
       kuvaTeade('Salvestamine ebaõnnestus. Veakood: Google Apps ' + data.error, 'NOK');
       return
     }
