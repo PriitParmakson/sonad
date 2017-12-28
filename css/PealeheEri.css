@@ -1,3 +1,31 @@
+/* Uue sõna sisestusala
+  Kujundus imiteeritud Bootstrap input elemendi järele
+*/
+#UusSona { 
+  width: 30rem;
+  height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  line-height: 1.25;
+  color: #464a4c;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-right: 2rem;
+}
+#UusSona:focus {
+  border-color: LightGray;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.055) inset, 0 0 8px rgba(220, 180, 220, 0.6);
+  outline: 0 none;
+}
+/* Nupud */
+.ikoon { font-family: 'Material Icons';
+  font-size: 48px;
+}
+.nupp { margin: 0 0.5rem;
+  cursor: pointer;
+  color: #757575;
+}
+.disabled { color: Gainsboro !important; cursor: auto; }
+
 .paan {
   border-radius: 4px; 
   padding: 0 0 0.5rem;
@@ -37,36 +65,7 @@
   background-color: lavenderblush;
 }
 
-/* Nupud */
-.ikoon { font-family: 'Material Icons';
-  font-size: 48px;
-}
-.nupp { margin: 1rem 0.5rem;
-  cursor: pointer;
-  color: #757575;
-}
-.disabled { color: Gainsboro !important; cursor: auto; }
-
 #sonaKirjed p {
   margin-bottom: 0.2rem;
-}
-
-/* Uue sõna sisestusala
-  Kujundus imiteeritud Bootstrap input elemendi järele
-*/
-#UusSona { 
-  display: block;
-  width: 100%;
-  height: auto; /* 2.5rem; */
-  padding: 0.5rem 0.75rem;
-  line-height: 1.25;
-  color: #464a4c;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  margin-bottom: 1rem; }
-#UusSona:focus {
-  border-color: LightGray;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.055) inset, 0 0 8px rgba(220, 180, 220, 0.6);
-  outline: 0 none;
 }
 

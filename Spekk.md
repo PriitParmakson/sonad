@@ -2,7 +2,7 @@
 permalink: Spekk
 ---
 
-# Spekk
+# Spetsifikatsioon
 
 Terminoloogia
 - `sõna` on huvitav, oluline sõna või fraas

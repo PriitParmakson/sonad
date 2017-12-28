@@ -3,11 +3,14 @@ body {
   max-width: 50em;
   margin: 0 0; 
   padding: 0.6em 1.5em 2em 2em; 
-  font-family: 'Times New Roman', serif;
-  font-size: 12pt; 
   color: black !important;
   line-height: 1.25 !important;
-  }
+}
+
+body, input {
+  font-family: 'Times New Roman', serif;
+  font-size: 12pt; 
+}
 
 /* Päis */
 .pais { font-family: 'Anonymous Pro', sans-serif;
@@ -135,3 +138,4 @@ blockquote {
 
 /*#endregion */
 
+hr { color: lightgray; }
