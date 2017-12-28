@@ -26,8 +26,8 @@ permalink: Spekk
   - asub Githubis: [https://github.com/agiil/sonad](https://github.com/agiil/sonad)
   - publitseeritakse GitHub Jekylli abil: [https://agiil.github.io/sonad/](https://agiil.github.io/sonad/)
 - backend-rakendus
-  - Google Drive Sheet
-  - Google Apps Script rakendus
+  - Google Drive Sheet: [https://docs.google.com/spreadsheets/d/1-1BP-pSobA1oXvrpAzmdgpxB0p-buvzGBwjRS-PILbk/edit](https://docs.google.com/spreadsheets/d/1-1BP-pSobA1oXvrpAzmdgpxB0p-buvzGBwjRS-PILbk/edit)
+  - Google Apps Script rakendus: [https://script.google.com/macros/d/M8sYqpoUtu41d82wer8ioDb_b6bBKoTqI/edit](https://script.google.com/macros/d/M8sYqpoUtu41d82wer8ioDb_b6bBKoTqI/edit)
 
 ## Sõnade salvestamine
 - salvestatakse Google Drive arvutustabelisse, backend-rakenduse API kaudu 
