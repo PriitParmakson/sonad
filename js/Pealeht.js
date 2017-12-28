@@ -7,11 +7,10 @@ var kasutaja;
 
 function alusta() {
   laeSonad();
-  /* Käsitleja eksamitöö esitamise nupule
-  $('#esitaNupp').on('click', e => {
-    e.preventDefault(); 
-    esitaEksamitoo();
-  }); */
+  /* Käsitleja uue sõna salvestamise nupule */
+  $('#SalvestaUusSonaNupp').on('click', e => {
+    salvestaSona();
+  });
 }
 
 function laeSonad() {
@@ -33,4 +32,9 @@ function esitaSonad(kirjed) {
     var p = $('<p></p>').text(kirje.Kirje);
     $('#sonaKirjed').append(p);
   });
+}
+
+function salvestaSona() {
+  var sona = $('#UusSona').val();
+  kuvaTeade(sona + ' salvestatud.', 'OK');
 }

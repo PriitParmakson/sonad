@@ -26,8 +26,10 @@
 }
 .disabled { color: Gainsboro !important; cursor: auto; }
 
-.paan {
+/*#region Teateala */
+.#Teateala {
   border-radius: 4px; 
+  border: 1px solid #C5E1A5;
   padding: 0 0 0.5rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem; 
@@ -35,7 +37,7 @@
 .peidetud { 
   /* display: flex; ülekirjutamiseks */
   display: none !important;
-}
+}  
 .sulgemisnupuke {
   /* Sulgemisnupuke */
   padding: 0 0.5rem 0.5rem 0.5rem;
@@ -44,16 +46,7 @@
   font-size: 16pt;
   font-weight: bold;
   color: Gray;
-}
-.dialoog {
-  /* Avatav/suletav dialoogivorm */
-  border: 1px solid #C5E1A5;
-}
-
-/* Teatepaan */
-#Teatepaan { 
-  border: 1px solid #C5E1A5;
-}
+}  
 .OKteade {
   color: darkslategray;
   border: 1px solid Aqua;
@@ -64,6 +57,7 @@
   border: 1px solid coral;
   background-color: lavenderblush;
 }
+/*#endregion */
 
 #sonaKirjed p {
   margin-bottom: 0.2rem;

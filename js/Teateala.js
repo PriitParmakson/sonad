@@ -1,6 +1,6 @@
 function kuvaTeade(teade, teateTyyp) {
   /*
-    Avab teatepaani ja kuvab teate, HTML-na.
+    Avab Teatealai ja kuvab teate, HTML-na.
     Oluline: sisend peab olema murdskriptimise seisukohalt
     kontrollitud ja vajadusel puhastatud.
     Teate tüüp p.o kas 'OK' või 'NOK'. Vastavalt seatakse
@@ -9,26 +9,26 @@ function kuvaTeade(teade, teateTyyp) {
     Kasutaja saab teate sulgeda.
   */
   // Eemalda eelmise teate tüüp
-  $('#Teatepaan').removeClass('OKteade NOKteade');
+  $('#Teateala').removeClass('OKteade NOKteade');
   // Sea teatetüüp
   if (teateTyyp) {
     if (teateTyyp == 'OK') {
-      $('#Teatepaan').addClass('OKteade');
+      $('#Teateala').addClass('OKteade');
     } else if (teateTyyp == 'NOK') {
-      $('#Teatepaan').addClass('NOKteade');
+      $('#Teateala').addClass('NOKteade');
     } 
   }  
-  $('#Teatepaan').removeClass('peidetud');
+  $('#Teateala').removeClass('peidetud');
   $('#Teatetekst').html(teade);
 }
 
-function seaTeatepaaniKasitlejad() {
+function seaTeatealaKasitlejad() {
   /*
-    Teatepaani sulgemine
+    Teateala sulgemine
   */
-  $('#TeatepaanSulge').click(() => {
-    $('#Teatepaan').addClass('peidetud');
+  $('#TeatealaSulge').click(() => {
+    $('#Teateala').addClass('peidetud');
   });
 }
 
-seaTeatepaaniKasitlejad();
+seaTeatealaKasitlejad();

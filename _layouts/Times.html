@@ -29,7 +29,7 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     
     <script src='js/Pealeht.js'></script>
-    <script src='js/Teatepaan.js'></script>
+    <script src='js/Teateala.js'></script>
     <script src='js/GoogleAutentimine.js'></script>
     <link rel='stylesheet' href='css/PealeheEri.css'>
   {% endif %}
@@ -57,6 +57,16 @@
   </div>
 
   {% if page.pealeht == true %}
+  <!-- Teateala -->
+  <div id='Teateala' style='display: flex; justify-content: space-between; margin: 1rem 0;'>
+    <p id='Teatetekst'></p>
+    <div id='TeatealaSulge' class='sulgemisnupuke'>
+      <span>&times;</span>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.pealeht == true %}
   <!-- Uue sõna dialoog -->
   <div id='UueSonaDialoog' style='display: flex; align-items: center; margin: 2rem 0;'>
     <!-- Uus sõna -->
@@ -74,7 +84,10 @@
     {{ content }}
   </div>
   
-  {% include Jalus.html %}
+  <hr>
+
+  Priit Parmakson · 2018 · v{{ site.versioon }} · <a href='{{ site.baseurl }}/Spekk' target='_new'>Spetsifikatsioon</a>
+
 </body>
 
 </html>
