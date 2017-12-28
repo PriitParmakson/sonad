@@ -37,7 +37,6 @@ function esitaSonad(kirjed) {
 
 function salvestaSona() {
   var sona = $('#UusSona').val();
-  kuvaTeade(sona + ' salvestatud.', 'OK');
 
   /* ID token on oluline võtta iga kord enne salvestamist, sest see aegub tunniga. */
   var id_token = kasutaja.getAuthResponse().id_token;  
@@ -62,7 +61,7 @@ function salvestaSona() {
     if (data.result == 'success') {
       kuvaTeade('Salvestatud.', 'OK');
     } else { 
-      kuvaTeade('Salvestamine ebaõnnestus. Veakood: Google Apps ' + data.error.message, 'NOK');
+      kuvaTeade('Salvestamine ebaõnnestus. Veakood: Google Apps ' + data.error, 'NOK');
       return
     }
 	});
