@@ -11,6 +11,7 @@ function alusta() {
   $('#SalvestaUusSonaNupp').on('click', e => {
     salvestaSona();
   });
+  seaTeatealaKasitlejad();
 }
 
 function laeSonad() {
@@ -37,4 +38,33 @@ function esitaSonad(kirjed) {
 function salvestaSona() {
   var sona = $('#UusSona').val();
   kuvaTeade(sona + ' salvestatud.', 'OK');
+
+  /* ID token on oluline võtta iga kord enne salvestamist, sest see aegub tunniga. */
+  var id_token = kasutaja.getAuthResponse().id_token;  
+
+  // Koosta saadetav objekt
+  var s = {
+    sona: sona
+  }; 
+
+  // Salvesta vastused POST-päringuga Google töölehele
+  var postDeferred = $.post(url, s);
+  postDeferred.done(function (data, status) {
+    // Logi tulemus sirviku konsoolile
+    console.log('salvestaSona: POST vastus: data (töölehe tulemus): ' + data.result);
+    console.log('salvestaSona: POST vastus: status: ' + status);
+    // Töötle jQuery vastus
+    if (status !== 'success') {
+      kuvaTeade('Salvestamine ebaõnnestus. Veakood: jQuery ' + status, 'NOK');
+      return
+    }
+    // Töötle töölehe vastus
+    if (data.result == 'success') {
+      kuvaTeade('Salvestatud.', 'OK');
+    } else { 
+      kuvaTeade('Salvestamine ebaõnnestus. Veakood: Google Apps ' + data.error.message, 'NOK');
+      return
+    }
+	});
+
 }

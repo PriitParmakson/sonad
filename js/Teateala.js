@@ -1,6 +1,6 @@
 function kuvaTeade(teade, teateTyyp) {
   /*
-    Avab Teatealai ja kuvab teate, HTML-na.
+    Avab Teateala ja kuvab teate, HTML-na.
     Oluline: sisend peab olema murdskriptimise seisukohalt
     kontrollitud ja vajadusel puhastatud.
     Teate tüüp p.o kas 'OK' või 'NOK'. Vastavalt seatakse
@@ -26,9 +26,7 @@ function seaTeatealaKasitlejad() {
   /*
     Teateala sulgemine
   */
-  $('#TeatealaSulge').click(() => {
+  $('#TeatealaSulge').on('click', e => {
     $('#Teateala').addClass('peidetud');
   });
 }
-
-seaTeatealaKasitlejad();
